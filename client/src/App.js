@@ -19,6 +19,7 @@ const App = () => (
     <Route exact path="/about" component={About} />
     <Route exact path="/departments" component={Departments} />
     <Route exact path="/departments/new" component={DepartmentForm} />
+    {/* Use the same form for the edit just create a new URL and pass in any necessary props */}
     <Route exact path="/departments/:id" component={Department} />
     <Route exact path="/departments/:id/edit" component={DepartmentForm} />
     {/* <Route exact path="/departments/:id/edit" render={props => <DepartmentForm edit {...props} />} /> */}

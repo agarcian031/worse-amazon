@@ -8,6 +8,9 @@ class DepartmentForm extends React.Component {
 
   componentDidMount() {
     const { match: { params: { id } } } = this.props
+    // const {id} = this.props.match.params
+    // const id = this.props.match.params.id  -- standard js, not destructing
+    // check if the id exists before axios call
     if (id)
       axios.get(`/api/departments/${id}`)
         .then(res => {
@@ -28,6 +31,7 @@ class DepartmentForm extends React.Component {
     const department = { ...this.state }
     const { match: { params: { id } }, history: { push } } = this.props
     if (id) {
+      // one is for your database and the other is the react router routes 
       axios.put(`/api/departments/${id}`, department)
         .then(res => push(`/departments/${id}`))
     } else {
