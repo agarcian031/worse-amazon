@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; //so we can render jsx. 
 import axios from 'axios';
 import { Form, Button, Container } from 'semantic-ui-react';
 
