@@ -9,6 +9,7 @@ class Item extends React.Component {
 
   componentDidMount() {
     const { match: { params: { id, department_id } } } = this.props
+    // const {id, department_id} = this.props.match.params
     axios.get(`/api/departments/${department_id}/items/${id}`)
       .then(res => {
         this.setState({ item: res.data })
