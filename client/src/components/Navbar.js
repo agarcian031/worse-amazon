@@ -1,37 +1,53 @@
-import React from 'react'
-import {NavLink} from 'react-router-dom';
-import {Menu, Segment, Image, } from 'semantic-ui-react'; 
-// import styled from 'styled-components';
+import React from "react";
+import { NavLink, } from "react-router-dom";
+import { Menu, Segment, Image, } from 'semantic-ui-react';
 
 
-const Navbar = () => (
-  <>
+const NavBar = () => (
   <Segment inverted>
     <Menu inverted pointing secondary>
       <Menu.Item>
-        <NavLink exact path to="/" activeStyle={styles.active}>Home</NavLink>
+        <NavLink
+          exact
+          to="/"
+          activeStyle={styles.active}>
+          Home
+        </NavLink>
       </Menu.Item>
       <Menu.Item>
-        <NavLink exact path to="/about" activeStyle={styles.active}>About</NavLink>
+        <NavLink
+          exact
+          to="/about"
+          activeStyle={styles.active}>
+          About
+        </NavLink>
       </Menu.Item>
       <Menu.Item>
-        <NavLink exact path to="/departments" activeStyle={styles.active}>Departments</NavLink>
+        <NavLink
+          to="/departments"
+          activeStyle={styles.active}>
+          Departments
+        </NavLink>
       </Menu.Item>
     </Menu>
-    <div style={{display: 'flex', justifyContent: 'center', }}>
-      <div style={{display: 'flex', justifyContent: 'center', width: '50%', height: '280px'}}>
-        <Image src={require('../images/worse_amazon.png')} alt="logo"/>
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        width: '50%',
+        height: '280px',
+      }}>
+        <Image src={require('../images/worse_amazon.png')} alt="logo" />
       </div>
     </div>
   </Segment>
-  </>
 )
 
 const styles = {
   active: {
-    color: 'orange', 
-    fontWeight: 'bold', 
+    color: 'orange',
+    fontWeight: 'bold',
   }
 }
 
-export default Navbar; 
+export default NavBar
