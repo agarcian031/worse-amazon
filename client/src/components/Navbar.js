@@ -18,6 +18,11 @@ const Navbar = () => (
         <NavLink exact path to="/departments" activeStyle={styles.active}>Departments</NavLink>
       </Menu.Item>
     </Menu>
+    <div style={{display: 'flex', justifyContent: 'center', }}>
+      <div style={{display: 'flex', justifyContent: 'center', width: '50%', height: '280px'}}>
+        <Image src={require('../images/worse_amazon.png')} alt="logo"/>
+      </div>
+    </div>
   </Segment>
   </>
 )
